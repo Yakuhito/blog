@@ -1,3 +1,3 @@
 # yakuhito's blog
 
-Turns out Jekyll is a pretty good (and free) solution for hosting a blog.
+See it live at [blog.kuhi.to](https://blog.kuhi.to).
