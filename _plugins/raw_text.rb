@@ -7,6 +7,9 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
   rules = []
   docs.each do |doc|
+    # Not hosted here yet. Skip the plain-text mirror so the stub URL stays unpublished.
+    next if doc.data["external_url"]
+
     url = doc.url.to_s.sub(%r{/\z}, "")
     next if url.empty?
 

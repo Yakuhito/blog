@@ -8,7 +8,7 @@ layout: default
     {% for post in site.categories.fireacademy limit:7 %}
         <li class="post">
         <span class="special-colour">>> </span>
-          <a href="{{ post.external_url }}" class="post-entry" target="_blank">{{ post.title }} </a>
+          <a href="{{ post.external_url | default: post.url }}" class="post-entry"{% if post.external_url %} target="_blank"{% endif %}>{{ post.title }} </a>
           <span class="post-date"> ({{ post.date | date: "%B %e, %Y" }}) </span>
       </li>
   {% endfor %}
